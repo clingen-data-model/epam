@@ -34,6 +34,7 @@ use App\Modules\Group\Models\Traits\HasSubmissions as HasSubmissionsTrait;
  * @property int $id
  * @property string $uuid
  * @property string $name
+ * @property string $description
  * @property int $group_type_id
  * @property int $group_status_id
  * @property int $parent_id
@@ -63,6 +64,7 @@ class Group extends Model implements HasNotes, HasMembers, RecordsEvents, HasDoc
     protected $fillable = [
         'uuid',
         'name',
+        'description',
         'group_type_id',
         'group_status_id',
         'parent_id',
