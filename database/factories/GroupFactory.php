@@ -31,7 +31,7 @@ class GroupFactory extends Factory
             'uuid' => $this->faker->uuid(),
             'name' => $this->faker->name(),
             'description' => $this->faker->sentence(),
-            'group_type_id' => 1,
+            'group_type_id' => config('groups.types.wg.id'),
             'group_status_id' => $this->getRandomConfigValue('groups.statuses')['id'],
             'coi_code' => $code
         ];
@@ -62,7 +62,7 @@ class GroupFactory extends Factory
             ];
         });
     }
-    
+
     public function scvcep()
     {
         return $this->state(function ($attributes) {
